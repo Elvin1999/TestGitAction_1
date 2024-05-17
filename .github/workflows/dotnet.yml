@@ -27,7 +27,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
   check-format:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Setup .NET Core
@@ -43,8 +43,9 @@ jobs:
 
       - name: Run dotnet format
         run: dotnet format '.\' --folder --check --verbosity diagnostic
+        
   check-spacer:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
        - name: Super-Linter
          uses: super-linter/super-linter@v5.7.2
