@@ -21,8 +21,12 @@ namespace TestGitAction
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseRouting();
 
+
+
+
+
+            app.UseRouting();
             app.UseAuthorization();
 
             app.MapControllerRoute(
