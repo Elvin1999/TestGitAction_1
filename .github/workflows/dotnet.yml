@@ -33,7 +33,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '5.0.x'
 
       - name: Install dotnet-format tool
         run: dotnet tool install -g dotnet-format
@@ -43,8 +43,9 @@ jobs:
 
       - name: Run dotnet format
         run: dotnet format '.\' --folder --check --verbosity diagnostic
+        
   check-spacer:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
        - name: Super-Linter
          uses: super-linter/super-linter@v5.7.2
