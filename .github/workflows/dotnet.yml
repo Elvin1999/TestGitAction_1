@@ -32,5 +32,6 @@ jobs:
     - name: Code Formatting and Remove Whitespaces
       run: |
         dotnet tool install -g dotnet-format
-        dotnet format --check --exclude "**/bin/**" --exclude "**/obj/**"
+        dotnet format --check --exclude "**/bin/**" --exclude "**/obj/**" TestGitAction
         find . -name '*.cs' -type f -exec sed -i 's/[[:space:]]*$//' {} +
+
