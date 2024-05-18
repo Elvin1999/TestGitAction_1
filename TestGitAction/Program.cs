@@ -19,7 +19,12 @@ namespace TestGitAction
                 app.UseHsts();
             }
             //some codes changes
-            app.UseHttpsRedirection();
+             app.UseHttpsRedirection();
+
+
+
+
+
             app.UseStaticFiles();
 
             app.UseRouting();
